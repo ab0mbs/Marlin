@@ -759,10 +759,10 @@
 #define X2_MIN_POS 80          // Set a minimum to ensure the  second X-carriage can't hit the parked first X-carriage
 #define X2_MAX_POS 353         // Set this to the distance between toolheads when both heads are homed
 #define X2_HOME_DIR 1          // Set to 1. The second X-carriage always homes to the maximum endstop position
-#define X2_HOME_POS X2_MAX_POS // Default X2 home position. Set to X2_MAX_POS.                                                     \
-                               // However: In this mode the HOTEND_OFFSET_X value for the second extruder provides a software      \
-                               // override for X2_HOME_POS. This also allow recalibration of the distance between the two endstops \
-                               // without modifying the firmware (through the "M218 T1 X???" command).                             \
+#define X2_HOME_POS X2_MAX_POS // Default X2 home position. Set to X2_MAX_POS.
+                               // However: In this mode the HOTEND_OFFSET_X value for the second extruder provides a software
+                               // override for X2_HOME_POS. This also allow recalibration of the distance between the two endstops
+                               // without modifying the firmware (through the "M218 T1 X???" command).
                                // Remember: you should set the second extruder x-offset to 0 in your slicer.
 
 // This is the default power-up mode which can be later using M605.
@@ -1298,7 +1298,7 @@
 #define LED_USER_PRESET_GREEN 128      // User defined GREEN value
 #define LED_USER_PRESET_BLUE 0         // User defined BLUE value
 #define LED_USER_PRESET_WHITE 255      // User defined WHITE value
-#define LED_USER_PRESET_BRIGHTNESS 255 // User defined intensity \
+#define LED_USER_PRESET_BRIGHTNESS 255 // User defined intensity
                                        //#define LED_USER_PRESET_STARTUP       // Have the printer display the user preset color on startup
 #endif
 #if ENABLED(NEO2_COLOR_PRESETS)
@@ -1306,7 +1306,7 @@
 #define NEO2_USER_PRESET_GREEN 128      // User defined GREEN value
 #define NEO2_USER_PRESET_BLUE 0         // User defined BLUE value
 #define NEO2_USER_PRESET_WHITE 255      // User defined WHITE value
-#define NEO2_USER_PRESET_BRIGHTNESS 255 // User defined intensity \
+#define NEO2_USER_PRESET_BRIGHTNESS 255 // User defined intensity
                                         //#define NEO2_USER_PRESET_STARTUP       // Have the printer display the user preset color on startup for the second strip
 #endif
 #endif
@@ -1359,8 +1359,8 @@
 #if ENABLED(LCD_PROGRESS_BAR)
 #define PROGRESS_BAR_BAR_TIME 2000 // (ms) Amount of time to show the bar
 #define PROGRESS_BAR_MSG_TIME 3000 // (ms) Amount of time to show the status message
-#define PROGRESS_MSG_EXPIRE 0      // (ms) Amount of time to retain the status message (0=forever)                    \
-                                   //#define PROGRESS_MSG_ONCE         // Show the message for MSG_TIME then clear it \
+#define PROGRESS_MSG_EXPIRE 0      // (ms) Amount of time to retain the status message (0=forever)
+                                   //#define PROGRESS_MSG_ONCE         // Show the message for MSG_TIME then clear it
                                    //#define LCD_PROGRESS_BAR_TEST     // Add a menu item to test the progress bar
 #endif
 #endif
@@ -1660,14 +1660,14 @@
 #define STATUS_HOTEND_INVERTED // Show solid nozzle bitmaps when heating (Requires STATUS_HOTEND_ANIM for numbered hotends)
 #define STATUS_HOTEND_ANIM     // Use a second bitmap to indicate hotend heating
 #define STATUS_BED_ANIM        // Use a second bitmap to indicate bed heating
-#define STATUS_CHAMBER_ANIM    // Use a second bitmap to indicate chamber heating                                            \
-                               //#define STATUS_CUTTER_ANIM        // Use a second bitmap to indicate spindle / laser active \
-                               //#define STATUS_COOLER_ANIM        // Use a second bitmap to indicate laser cooling          \
-                               //#define STATUS_FLOWMETER_ANIM     // Use multiple bitmaps to indicate coolant flow          \
-                               //#define STATUS_ALT_BED_BITMAP     // Use the alternative bed bitmap                         \
-                               //#define STATUS_ALT_FAN_BITMAP     // Use the alternative fan bitmap                         \
-                               //#define STATUS_FAN_FRAMES 3       // :[0,1,2,3,4] Number of fan animation frames            \
-                               //#define STATUS_HEAT_PERCENT       // Show heating in a progress bar                         \
+#define STATUS_CHAMBER_ANIM    // Use a second bitmap to indicate chamber heating
+                               //#define STATUS_CUTTER_ANIM        // Use a second bitmap to indicate spindle / laser active
+                               //#define STATUS_COOLER_ANIM        // Use a second bitmap to indicate laser cooling
+                               //#define STATUS_FLOWMETER_ANIM     // Use multiple bitmaps to indicate coolant flow
+                               //#define STATUS_ALT_BED_BITMAP     // Use the alternative bed bitmap
+                               //#define STATUS_ALT_FAN_BITMAP     // Use the alternative fan bitmap
+                               //#define STATUS_FAN_FRAMES 3       // :[0,1,2,3,4] Number of fan animation frames
+                               //#define STATUS_HEAT_PERCENT       // Show heating in a progress bar
                                //#define BOOT_MARLIN_LOGO_ANIMATED // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
 
 // Frivolous Game Options
@@ -2100,9 +2100,9 @@
 //#define ARC_SEGMENTS_PER_R    1 // Max segment length, MM_PER = Min
 #define MIN_ARC_SEGMENTS 24 // Minimum number of segments in a complete circle
 //#define ARC_SEGMENTS_PER_SEC 50 // Use feedrate to choose segment length (with MM_PER_ARC_SEGMENT as the minimum)
-#define N_ARC_CORRECTION 25 // Number of interpolated segments between corrections                                    \
-                            //#define ARC_P_CIRCLES           // Enable the 'P' parameter to specify complete circles \
-                            //#define CNC_WORKSPACE_PLANES    // Allow G2/G3 to operate in XY, ZX, or YZ planes       \
+#define N_ARC_CORRECTION 25 // Number of interpolated segments between corrections
+                            //#define ARC_P_CIRCLES           // Enable the 'P' parameter to specify complete circles
+                            //#define CNC_WORKSPACE_PLANES    // Allow G2/G3 to operate in XY, ZX, or YZ planes
                             //#define SF_ARC_FIX              // Enable only if using SkeinForge with "Arc Point" fillet procedure
 #endif
 
@@ -2413,8 +2413,8 @@
    {                                 \
       X_MIN_POS + 10, Y_MIN_POS + 10 \
    }
-#define TOOLCHANGE_PARK_XY_FEEDRATE 6000 // (mm/min)                                                   \
-                                         //#define TOOLCHANGE_PARK_X_ONLY          // X axis only move \
+#define TOOLCHANGE_PARK_XY_FEEDRATE 6000 // (mm/min)
+                                         //#define TOOLCHANGE_PARK_X_ONLY          // X axis only move
                                          //#define TOOLCHANGE_PARK_Y_ONLY          // Y axis only move
 #endif
 #endif // HAS_MULTI_EXTRUDER
@@ -2471,7 +2471,7 @@
 #define PARK_HEAD_ON_PAUSE          // Park the nozzle during pause and filament change.
 #define HOME_BEFORE_FILAMENT_CHANGE // If needed, home before parking for filament change
 
-#define FILAMENT_LOAD_UNLOAD_GCODES // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu. \
+#define FILAMENT_LOAD_UNLOAD_GCODES // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu.
                                     //#define FILAMENT_UNLOAD_ALL_EXTRUDERS         // Allow M702 to unload all extruders above a minimum target temp (as set by M302)
 #endif
 
@@ -2634,7 +2634,7 @@
 #define X_CURRENT_HOME (X_CURRENT / 2) // (mA) RMS current for sensorless homing
 #define X_MICROSTEPS 16                // 0..256
 #define X_RSENSE 0.11
-#define X_CHAIN_POS -1 // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ... \
+#define X_CHAIN_POS -1 // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ...
                        //#define X_INTERPOLATE  true      // Enable to override 'INTERPOLATE' for the X axis
 #endif
 
@@ -3375,13 +3375,13 @@
 
 //#define AIR_EVACUATION                     // Cutter Vacuum / Laser Blower motor control with G-codes M10-M11
 #if ENABLED(AIR_EVACUATION)
-#define AIR_EVACUATION_ACTIVE LOW // Set to "HIGH" if the on/off function is active HIGH \
+#define AIR_EVACUATION_ACTIVE LOW // Set to "HIGH" if the on/off function is active HIGH
                                   //#define AIR_EVACUATION_PIN        42     // Override the default Cutter Vacuum or Laser Blower pin
 #endif
 
 //#define AIR_ASSIST                         // Air Assist control with G-codes M8-M9
 #if ENABLED(AIR_ASSIST)
-#define AIR_ASSIST_ACTIVE LOW // Active state on air assist pin \
+#define AIR_ASSIST_ACTIVE LOW // Active state on air assist pin
                               //#define AIR_ASSIST_PIN            44     // Override the default Air Assist pin
 #endif
 
