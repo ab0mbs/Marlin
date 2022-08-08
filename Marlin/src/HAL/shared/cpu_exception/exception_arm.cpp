@@ -54,7 +54,7 @@
 
 #include "exception_hook.h"
 #include "../backtrace/backtrace.h"
-#include "../HAL_MinSerial.h"
+#include "../MinSerial.h"
 
 #define HW_REG(X)  (*((volatile unsigned long *)(X)))
 
@@ -101,7 +101,7 @@ struct __attribute__((packed)) ContextSavedFrame {
   uint32_t ELR;
 };
 
-#if DISABLED(STM32F0xx)
+#if NONE(STM32F0xx, STM32G0xx)
   extern "C"
   __attribute__((naked)) void CommonHandler_ASM() {
     __asm__ __volatile__ (
@@ -221,7 +221,7 @@ bool resume_from_fault() {
   // So we'll just need to refresh the watchdog for a while and then stop for the system to reboot
   uint32_t last = start;
   while (PENDING(last, end)) {
-    watchdog_refresh();
+    hal.watchdog_refresh();
     while (millis() == last) { /* nada */ }
     last = millis();
     MinSerial::TX('.');
@@ -345,7 +345,7 @@ void hook_cpu_exceptions() {
       // We failed to find a valid vector table size, let's abort hooking up
       if (vec_size == VECTOR_TABLE_SENTINEL) return;
       // Poor method that's wasting RAM here, but allocating with malloc and alignment would be worst
-      // 128 bytes alignement is required for writing the VTOR register
+      // 128 bytes alignment is required for writing the VTOR register
       alignas(128) static unsigned long vectable[VECTOR_TABLE_SENTINEL];
 
       SERIAL_ECHOPGM("Detected vector table size: ");
