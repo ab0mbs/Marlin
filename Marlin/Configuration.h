@@ -621,13 +621,13 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  21.73,  21.73 }
-    #define DEFAULT_Ki_LIST {   1.54,   1.54 }
-    #define DEFAULT_Kd_LIST {  76.55,  76.55 }
+    #define DEFAULT_Kp_LIST {  37.49,  37.49 }
+    #define DEFAULT_Ki_LIST {   4.46,   4.46 }
+    #define DEFAULT_Kd_LIST {  78.73,  78.73 }
   #else
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_Kp  37.49
+    #define DEFAULT_Ki   4.46
+    #define DEFAULT_Kd  78.73
   #endif
 #endif
 
@@ -707,9 +707,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   // Creality Ender-3 Pro
-  #define DEFAULT_bedKp 50.71
-  #define DEFAULT_bedKi 9.88
-  #define DEFAULT_bedKd 173.43
+  #define DEFAULT_bedKp 91.92
+  #define DEFAULT_bedKi 15.53
+  #define DEFAULT_bedKd 362.79
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
